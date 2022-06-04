@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[a5paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amssymb}
+
+\setcounter{page}{243}
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\cfoot{\overline\mbox{{\quad\quad\textsl{\thepage}\quad\quad}}\raisebox{1mm}}
+
+\begin{document}
+В силу монотонности функции \(a^x\), пределы (конечные
+или бесконечные) \(\lim\limits_{x\to +\infty} a^x\) и \(\lim\limits_{x\to -\infty} a^x\) существуют, следовательно, достаточно доказать, что
+\[\lim\limits_{n\to \infty} a^{x_n} = +\infty, \lim\limits_{n\to \infty} a^{x'_n} = 0\]
+для каких-либо произвольных фиксированных последовательностей \(x_n \to +\infty\) и \(x'_n = -\infty\), например для последовательностей \(x_n = n, x''_n = -n, n = 1, 2, ...\) .
+
+По предположению, \(a > 1\), т.е.  \(a = 1 + \alpha\), где \(\alpha > 0\). Поэтому, согласно неравенству Бернулли (см. лемму в п. 4.9),
+\(a^n = (1 + \alpha)^n > n\alpha\), и так как \(\lim\limits_{n\to \infty} n\alpha = +\infty\), то и
+\(\lim\limits_{n\to \infty} a^n = +\infty\). Отсюда
+\[\lim\limits_{n\to \infty} a^{-n} = \frac{1}{\lim\limits_{n\to \infty} a^n} = 0.\]
+Тем самым равенство (7.18) при а > 1 доказано.
+
+Если теперь \(0 < а < 1\), то \(b = 1/a > 1\) и
+\[\lim\limits_{x\to +\infty} a^x = \lim\limits_{x\to +\infty} \left(\frac{1}{b}\right)^x = \frac{1}{\lim\limits_{x\to +\infty} b^x} = 0.\]
+\[\lim\limits_{x\to -\infty} a^x = \frac{1}{\lim\limits_{x\to -\infty} b^x} = +\infty. \square\]
+
+З а м е ч а н и е 1. Множество всех значений функции \(a^x\),
+\(a>0, a \neq 0\), составляет множество всех положительных действительных чисел, поэтому, в частности, при любом \(x \in \textbf{\textit{R}}\)
+имеет место неравенство \(a^x > 0\).
+
+З а м е ч а н и е 2. Если \(a > 0, b > 0\), то для любого \(x \in \textbf{\textit{R}}\)
+справедливо равенство
+\[(ab)^x = a^x b^x.\]
+
+Действительно, если \(r_n \to x, r_n \in \textbf{\textit{Q}}, n = 1, 2, ...\), то
+\[(ab)^x = \lim\limits_{n\to \infty} (ab)^{r_n} = \lim\limits_{n\to \infty} a^{r_n} b^{r_n} = \]
+\[ = \lim\limits_{n\to \infty} a^{r_n} \lim\limits_{n\to \infty} b^{r_n} = a^x b^x . \square \]
+\newpage
+\noindent
+\begin{footnotesize}
+\textit{УПРАЖНЕНИЕ}. Пусть \(a > 0, b> 0\). Доказать, что для любого \(x \in \textbf{\textit{R}}\) имеет место равенство \end{footnotesize} \(\left(\frac{a}{b}\right)^x = \frac{a^x}{b^x}.\) \\
+
+З а м е ч а н и е 3. Если r — рациональное число и \(r > 0\),
+то \(0^r = 0\), и, следовательно, для любого действительного числа
+\(x > 0\) существует предел \(\lim\limits_{r\to x, r \in \textbf{\textit{Q}}} 0^r = 0\). Поэтому при \(x > 0\)
+определение (7.5) можно распространить и на случай \(a = 0\),
+причем будет иметь место равенство \(0^x = 0, x > 0\).
+
+Отметим, что в области действительных чисел возведению нуля в неположительную степень: \(0^x, x < 0\) — нельзя приписать смысла.
+
+Пусть a — положительное число, не равное единице. Из
+элементарной математики известно, что операция, обратная
+возведению в степень и ставящая в соответствие данному числу \(x > 0\) такое число y, что \(a^y = x\) (если, конечно, указанное y
+существует), называется логарифмированием по основанию а.
+Число y называется \textit{логарифмом} числа x по основанию a и
+обозначается через \(\log_a x\). Таким образом, по определению,
+\[a^{\log_a x} = x (a > 0, a \neq 1) .\eqno(7.19) \]
+
+\noindent
+\textsf{\textbf{Определение 3}}.\textit{Функция, ставящая в соответствие каждому числу x его логарифм \(\log_a x\) по основанию a (\(a > 0\),
+\(a \neq 1\)), если этот логарифм существует, называется логарифмической функцией \(у = \log_a x\).}
+
+Логарифмическая функция по основанию 10 обозначается символом \(\lg\), а по основанию \(e\) — символом \(\ln\); \(\ln x\) называется натуральным логарифмом числа x.
+
+\noindent
+\textsf{\textbf{Т\,Е\,О\,Р\,Е\,М\,А 4}}.
+\textit{Функция \(y = \log_a x, a > 0, a \neq 1\), определена на
+множестве всех \(x > 0\) и является на этом множестве 
+строго монотонной (возрастающей при \(a > 1\) и убывающей 
+при \(a < 1\)) непрерывной функцией. Она имеет следующие
+свойства:} \\
+\(1^0. \log_a {x_1 x_2} = \log_a x_1 + \log_a x_2, x_1 > 0, x_2 > 0.\) \\
+\(2^0. \log_a {x^\alpha} = \alpha \log_a x, x > 0, \alpha \in \textbf{\textit{R}}.\)
+\end{document}
